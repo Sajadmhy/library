@@ -11,7 +11,7 @@
     <div id="table">
 
     </div>
-    <div class="btn"><button>NEW BOOK</button></div>
+    <div class="btn"><button onclick="openForm()">NEW BOOK</button></div>
     <div class="form-popup" id="myForm">
         <form action="#" class="form-container">
           <h1>Book Details</h1>
@@ -35,8 +35,10 @@
           <input type="radio" id="no" name="is_read" value="no">
           <label for="no">No</label><br>
         </div>
+        <div class="buttons">
           <button type="submit" class="btns">Add</button>
-          <button type="button" class="btns" onclick="closeForm()">Cancel</button>
+          <button type="button" class="btns close" onclick="closeForm()">Cancel</button>
+        </div>
         </form>
       </div>
     <script src="library.js"></script>

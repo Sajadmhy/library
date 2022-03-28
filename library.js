@@ -15,6 +15,7 @@ function addBookToLibrary() {
 
 // write a function that loops through the array and display...
 // each book on the page.
+
 function displayBook() {
     for (let i = 0 ; i < myLibrary.length; i++){
         const para = document.createElement("P");
@@ -23,3 +24,12 @@ function displayBook() {
         document.getElementById('table').appendChild(para);
     }};
 
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      };
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      };
+
+      
