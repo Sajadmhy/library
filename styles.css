@@ -1,0 +1,22 @@
+.btn {
+    display: flex;
+    justify-content: center;
+}
+.btn button {
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    flex: 0 1 auto;
+    font-weight: bold;
+}
+
+.form-item {
+    display: block;
+    margin: 20px;
+}
+
+.btns {
+    margin: 20px;
+}
