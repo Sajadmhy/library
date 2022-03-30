@@ -55,3 +55,12 @@ form {
 input {
     margin: 0px 10px;
 }
+
+
+.book-card {
+    margin: 20px;
+    display: inline-block;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 10px;
+}
