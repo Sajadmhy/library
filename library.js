@@ -32,12 +32,21 @@ const   isRead = function() {
 const table = document.getElementById("table");
 
 
-function Book(title, author, pages, isRead) {
+class Book {
+    constructor(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
-};
+}};
+
+
+// function Book(title, author, pages, isRead) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.isRead = isRead;
+// };
 
 function createBook() {
     if (title.value === "" || author.value === "" || pages.value === ""){
