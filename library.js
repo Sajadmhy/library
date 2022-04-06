@@ -19,7 +19,7 @@ let myLibrary = [
     }
 ];
 
-
+const   form = document.getElementsByTagName("form")[0];
 const   title = document.getElementById("title");
 const   author = document.getElementById("author");
 const   pages = document.getElementById("pages");
@@ -31,6 +31,39 @@ const   isRead = function() {
         }};
 const table = document.getElementById("table");
 
+
+title.addEventListener("input", function(event) {
+    title.setCustomValidity("");
+    title.checkValidity();
+});
+
+title.addEventListener('invalid', function() {
+    if (title.value === "") {
+        title.setCustomValidity("Enter the title!");
+    } else {
+        title.setCustomValidity("Title is not valid. Try again!");
+    }
+});
+
+author.addEventListener("input", function(event) {
+    author.setCustomValidity("");
+    author.checkValidity();
+});
+
+author.addEventListener('invalid', function() {
+    if (author.value === "") {
+        author.setCustomValidity("Enter the author!");
+        author.reportValidity();
+    } else {
+        author.setCustomValidity("Author name is not valid. Try again!");
+    }
+});
+
+form.addEventListener("submit", function(event) {
+    if (!title.validity.valid || !author.validity.valid) {
+        event.preventDefault();
+    }
+});
 
 class Book {
     constructor(title, author, pages, isRead) {
@@ -128,7 +161,7 @@ function clearDisplay() {
 }
 
 function deleteBook(i) {
-	myLibrary.splice(0, 1);
+	myLibrary.splice(i, 1);
 	clearDisplay();
     displayBook();
 }
@@ -149,9 +182,6 @@ function addBookToLibrary() {
     displayBook();
 };
 
-
-// write a function that loops through the array and display...
-// each book on the page.
 
 
 

@@ -10,15 +10,15 @@
 <body>
     <div class="btn"><button onclick="openForm()">NEW BOOK</button></div>
     <div class="form-popup" id="myForm">
-        <form action="#" method="post" class="form-container">
+        <form onsubmit="addBookToLibrary()" action="#" method="post" class="form-container" onsubmit="return false">
           <h1>Book Details</h1>
         <div class="form-item">
           <label for="title"><b>Title</b></label>
-          <input type="text" id="title" placeholder="Title of the Book" name="title" required>
+          <input type="text" id="title" placeholder="Title of the Book" name="title" required pattern="[A-Za-z]+">
         </div>
         <div class="form-item">
           <label for="author"><b>Author</b></label>
-          <input type="text" id="author" placeholder="Author of the Book" name="author" required>
+          <input type="text" id="author" placeholder="Author of the Book" name="author" required pattern="[A-Za-z]+">
         </div>
         <div class="form-item">
           <label for="pages"><b>Number of Pages</b></label>
@@ -33,7 +33,7 @@
           <label for="no">No</label><br>
         </div>
         <div class="buttons">
-          <button type="button" class="btns" onclick="addBookToLibrary()">Add</button>
+          <button class="btns" >Add</button>
           <button type="reset" class="btns" value="reset">Reset</button>
           <button type="button" class="btns close" onclick="closeForm()">Cancel</button>
         </div>
